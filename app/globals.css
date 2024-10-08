@@ -1,27 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.wrapper {
+  @apply container mx-auto;
+}
+
+/* NAVBAR */
+
+nav {
+  @apply bg-[#1B0C4D];
+}
+
+.navbar {
+  @apply flex justify-between items-center py-2;
+}
+
+.logo-content {
+  @apply flex justify-center items-center gap-[6px];
+}
+
+.logo {
+  @apply text-white text-[2rem];
+}
+
+.nav-links {
+  @apply flex text-white justify-between gap-8;
+}
+
+.nav-btn {
+  @apply flex justify-between gap-5;
+}
+
+/* HERO */
+
+.hero-top {
+  @apply bg-gradient-to-r from-[#241457] to-[#4f2bbd] text-white py-1 px-4 flex gap-2 w-1/4 rounded-lg;
 }
